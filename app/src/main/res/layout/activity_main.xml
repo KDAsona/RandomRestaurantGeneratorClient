@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper_food_1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_marginTop="75dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|end"
+            android:layout_marginStart="20dp"
+            android:text="Food type"
+            android:textSize="18dp"
+            android:textColor="#FFEFD5"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            ></TextView>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/spinner_box_border"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05">
+
+        <Button
+            android:id="@+id/sort_by_rating_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            android:background="@drawable/spinner_box_border"
+            app:backgroundTint="@null"
+            android:text="Sort by rating"
+            android:textSize="8.5dp"
+            android:textColor="#802b00"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/restore_all_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            android:background="@drawable/spinner_box_border"
+            app:backgroundTint="@null"
+            android:text="Restore all"
+            android:textSize="8.5dp"
+            android:textColor="#802b00"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/random_pick_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="35dp"
+            android:padding="5dp"
+            android:background="@drawable/spinner_box_border"
+            app:backgroundTint="@null"
+            android:text="Pick one for me!"
+            android:textSize="8.5dp"
+            android:textColor="#802b00"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginBottom="50dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/restaurant_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
