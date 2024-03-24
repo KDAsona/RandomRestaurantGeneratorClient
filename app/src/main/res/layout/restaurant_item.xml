@@ -17,8 +17,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/restaurant_item_icon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/default_icon_0"
             android:layout_margin="10dp"/>
         <LinearLayout

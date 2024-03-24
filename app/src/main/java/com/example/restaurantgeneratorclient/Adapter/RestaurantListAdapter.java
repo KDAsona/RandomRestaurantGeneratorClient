@@ -1,5 +1,7 @@
 package com.example.restaurantgeneratorclient.Adapter;
 
+import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.restaurantgeneratorclient.MainActivity;
 import com.example.restaurantgeneratorclient.Object.Restaurant;
 import com.example.restaurantgeneratorclient.R;
 
@@ -22,9 +23,11 @@ import java.util.List;
 public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAdapter.CustomViewHolder> {
 
     List<Restaurant> mItemList = new ArrayList<Restaurant>();
+    private Context mContext;
 
     // Populate the item list of this adapter.
-    public RestaurantListAdapter(List<Restaurant> dataSet) {
+    public RestaurantListAdapter(Context context, List<Restaurant> dataSet) {
+        mContext = context;
         mItemList = dataSet;
     }
 
@@ -39,12 +42,24 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
     // This is a crucial part, where we connect the item class with the ViewHolder!
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Restaurant item = mItemList.get(position);
+        Log.d("Adapter", "onBindViewHolder");
 
         // Fill each view in the Custom ViewHolder with corresponding attributes.
+        //Log.d("Adapter", item.getPhotoURL());
+        if (item.getPhotoUrl() == null) {
+            Log.d("Adapter", "null photo position is " + String.valueOf(position));
+        } else {
+            String photoUrl = item.getPhotoUrl();
+            Glide.with(mContext)
+                    .load(photoUrl)
+                    .into(holder.icon);
+            Log.d("Adapter", "custom image loaded to item.");
+        }
         holder.restaurantName.setText(item.getRestaurantName());
         holder.foodType.setText(item.getFoodType());
         float float_rating = (float) item.getAvgRating() / 10;
         holder.avgRating.setText(String.valueOf(float_rating));
+
     }
 
     @Override

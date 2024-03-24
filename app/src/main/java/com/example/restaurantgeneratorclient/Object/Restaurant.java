@@ -6,8 +6,8 @@ public class Restaurant {
     private String restaurantName;
     private String foodType;
     private int avgRating;
-    private String photoURL;
-    private String googleMapURL;
+    private String photoUrl;
+    private String googleMapUrl;
 
     // In theory, we shouldn't call this method at any given time.
     public int getRestaurantId() {
@@ -42,12 +42,12 @@ public class Restaurant {
         this.avgRating = avgRating;
     }
 
-    public String getPhotoURL() { return photoURL;}
+    public String getPhotoUrl() { return photoUrl;}
 
-    public void setPhotoURL(String photoURL) { this.photoURL = photoURL; }
+    public void setPhotoUrl(String photoUrl) { this.photoUrl = photoUrl; }
 
-    public String getGoogleMapURL() { return googleMapURL; }
+    public String getGoogleMapUrl() { return googleMapUrl; }
 
-    public void setGoogleMapURL(String googleMapURL) { this.googleMapURL = googleMapURL; }
+    public void setGoogleMapUrl(String googleMapUrl) { this.googleMapUrl = googleMapUrl; }
 
 }

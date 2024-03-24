@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         // Basic initialization of the recycler (but Restaurant list has yet to be populated).
         mRestaurantListRecyclerView = (RecyclerView) findViewById(R.id.restaurant_list_recycler_view);
         mRestaurantListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRestaurantListAdapter = new RestaurantListAdapter(mRestaurantList);
+        mRestaurantListAdapter = new RestaurantListAdapter(this, mRestaurantList);
         mRestaurantListRecyclerView.setAdapter(mRestaurantListAdapter);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
