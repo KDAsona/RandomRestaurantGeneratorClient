@@ -22,10 +22,7 @@
             android:gravity="center_vertical|end"
             android:layout_marginStart="20dp"
             android:text="Food type"
-            android:textSize="18dp"
-            android:textColor="#FFEFD5"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
+            style="@style/custom_text_style_title"
             ></TextView>
         <Spinner
             android:id="@+id/spinner"
