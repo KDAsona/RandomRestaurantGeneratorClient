@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:visibility="gone"
-        android:background="#ffbf00" />
+        android:background="@color/default_light_color_3" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -66,6 +66,6 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:visibility="gone"
-        android:background="#ffbf00" />
+        android:background="@color/default_light_color_3" />
 
 </LinearLayout>

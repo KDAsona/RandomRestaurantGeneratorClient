@@ -50,14 +50,9 @@
             android:layout_weight="1"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="20dp"
-            android:padding="5dp"
-            android:background="@drawable/spinner_box_border"
             app:backgroundTint="@null"
             android:text="Sort by rating"
-            android:textSize="8.5dp"
-            android:textColor="#802b00"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
+            style="@style/custom_button_style_1"
             />
 
         <Button
@@ -66,14 +61,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="20dp"
-            android:padding="5dp"
-            android:background="@drawable/spinner_box_border"
             app:backgroundTint="@null"
             android:text="Restore all"
-            android:textSize="8.5dp"
-            android:textColor="#802b00"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"/>
+            style="@style/custom_button_style_1"/>
 
         <Button
             android:id="@+id/random_pick_button"
@@ -81,14 +71,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="35dp"
-            android:padding="5dp"
-            android:background="@drawable/spinner_box_border"
             app:backgroundTint="@null"
             android:text="Pick one for me!"
-            android:textSize="8.5dp"
-            android:textColor="#802b00"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"/>
+            style="@style/custom_button_style_1"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
